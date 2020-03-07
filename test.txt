@@ -1,9 +1,0 @@
-Git Commands
------------------
-
-1. [git status] - to view any changes in my machine or remote (file add, remove, edit)
-2. [git add .] - add every changes to git
-3. [git commit -m "your message"] - adding commit message which will show up on git
-4. [git push] - pushing everything into the git server
-
-5. [git pull] - to get the updates from server

@@ -1,0 +1,512 @@
+/* ---------------------------*/
+/* basic setup */
+/* ---------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+html,body{
+    background-color: fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+/* ---------------------------*/
+/* Reusable Component */
+/* ---------------------------*/
+.row{
+    max-width: 1140px;
+    margin: 0 auto;    
+}
+section{
+    padding: 80px 0;
+}
+.box{
+    padding: 1%;
+
+}
+
+
+/* ---------------------------*/
+/* Header */
+/* ---------------------------*/
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.hero-text-box{
+    width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+.logo-black{
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+/* ------main nav -----*/
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border bottom 0.2s;
+    word-spacing: 3px;
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #e67e22;
+}
+
+/*--------sticky nav-----------*/
+.sticky{
+    position: fixed;
+    background-color: #f4f4f4 ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 16px 0;
+    color: #555;
+}
+.sticky .logo-black{
+    display: block;
+}
+.sticky .logo{
+    display: none;
+}
+.sticky .main-nav{
+    margin-top: 20px;
+}
+
+/*--------mobile  nav ------*/
+
+/* ---------------------------*/
+/* Headings */
+/* ---------------------------*/
+
+h1, h2, h3{
+    font-weight: 100;
+    text-transform: uppercase;
+}
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;;
+}
+h2{
+    word-spacing: 2px;
+    font-size: 180%;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;; 
+}
+h3{
+    margin-bottom: 15px;
+    font-size: 110%;
+}
+h2:after{
+    display: block;
+    height: 2px;
+    background:  #e67e22;
+    width: 100px;
+    content: " ";
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+/* ---------Paragraph---------- */
+.long-text{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+.box p{
+    line-height: 145%;
+    font-size: 90%;
+    text-align: justify;
+} 
+
+/* ---------How it works---------- */
+
+.section-steps{
+    background-color: #f4f4f4;
+}
+.steps-box:first-child{
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30Px;
+}
+.steps-box:last-child{
+    padding-left: 3%;
+    margin-top: 70px;
+
+}
+.app-screen{
+    width: 40%; 
+}
+.works-step{
+    margin-bottom: 50px;
+}
+.works-step div{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    text-align: center;
+    padding:5px;
+    font-size: 150%;
+    margin-right: 25px;
+} 
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+.clearfix{
+    zoom: 1;
+}
+.clearfix:after{
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0;
+    visibility: hidden;
+}
+
+/* ---------Icons---------- */
+.icon-small{
+    color: #e67e22;
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    font-size: 120%;
+    margin-right: 10px;
+    /* secrets to align text & icons */
+    line-height: 120%;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+.big-icons{
+    font-size: 350%;
+    color: #e67e22;
+    display: inline-block;
+    margin-bottom: 10px;   
+}
+
+.section-features .long-text{
+    margin-bottom: 30px;
+}
+
+/* ---------MEALS---------- */
+.section-meals{
+    padding: 0;
+}
+.meal-showcase{
+    width: 100%;
+    list-style: none;
+}
+.meal-showcase li{
+    width: 25%;
+    float: left;
+    display: block;
+}
+.meals-photo{
+   margin: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+.meals-photo img{
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.3s, opacity 0.3s;
+}
+.meals-photo img:hover{
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+/* ---------------------------*/
+/* ---------Buttons---------- */
+/* ---------------------------*/
+
+.btn:hover,
+.btn:active{
+    background: #cf6d17;
+    color: #fff;
+}
+.btn:link,
+.btn:visited,
+input[type = submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+.btn-full:link,
+.btn-full:visited,
+input[type = submit]
+{
+    background: #e67e22 ;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type = submit]:hover,
+input[type = submit]:active{
+    background: #cf6d17 ;
+    color: #fff;
+}
+.btn-ghost:hover,
+.btn-ghost.btn:active{
+    border: 1px solid hsl(28, 82%, 51%);
+    color: #fff;
+}
+.btn-app:link,
+btn-app:visited{
+    border:0;
+}
+
+/* ---------CITIES---------- */
+.box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.city-features{
+    margin-bottom: 5px;
+}
+/* ---------LINKS---------- */
+a:link,
+a:visited{
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid #e67e22;
+    padding-bottom: 1px;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+a:hover,
+a:active{
+    border-bottom: 1px solid transparent;
+    color: #555
+}
+
+/*--------------section-testimonial--------- */
+.section-testimonial{
+    background:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(../img/back-customers.jpg);
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+}
+blockquote:before{
+    content: "\201C";
+    font-size: 400%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+blockquote{
+    position: relative;
+    padding: 4px;
+    line-height: 145%;
+    font-style: italic;
+    top: 25px;
+    margin-top: 40px;
+}
+cite{
+    margin-top: 25px;
+    font-size: 90%;
+    display: inline-block;
+    
+}
+cite img{
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.btn-sign{
+    border: 0;
+}
+
+/* -------section-plans -----------*/
+.section-plans{
+    background: #f4f4f4;
+}
+.plan-box{
+    background: #fff;
+    width: 90%;
+    border-radius: 5px;
+    margin-left: 5px;
+    box-shadow: 0 2px 2px #9e9a9a;
+}
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    color: #e67e22;
+    font-weight: normal;
+}
+.plan-price span{
+    font-weight: 200;
+    font-size: 40%;
+}
+.plan-price-meal{
+    font-size: 80%;
+    
+}
+.plan-box ul{
+    list-style: none;
+}
+.plan-box div:first-child{
+    background: #fcfcfc;
+}
+.plan-box div:last-child{
+    text-align: center;
+    border: 0;
+}
+
+
+/* -------section-plans -----------*/
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+input[type=text],input[type=email], textarea, select{
+    padding: 7px;
+    width: 100%;
+    border: 1px solid #ccc;
+} 
+textarea{
+    height: 100%;
+}
+input[type = checkbox]{
+    margin:10px 5px 10px 0;
+}
+*:focus{
+    outline: none;
+}
+
+/* -------Footer -----------*/
+footer{
+    background: #333;
+    
+}
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+.social-links{
+    list-style: none;
+    float: right;
+}
+.footer-nav li,  .social-links li{
+    display: inline-block;
+    text-decoration: none;
+}
+.social-links li:last-child{
+    margin-right: 0;
+}
+.footer-nav li a,  .social-links li a{
+    text-decoration: none;
+    margin-right: 20px;
+}
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    text-decoration: none;
+    color: #888;
+
+}
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li a:hover,
+.social-links li a:active{
+    color : #ddd;
+}
+.footer p{
+    color : #888;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 30px;
+    margin: 0 auto;
+}
+
+/* --------Animation--------- */
+.js--wp-1,
+.js--wp-2,
+.js--wp-3{
+    opacity: 0;
+    animation-duration: 1s;
+}
+.js--wp-3{
+    animation-duration: 1s;
+}
+.js--wp-1 .animated,
+.js--wp-2 .animated,
+.js--wp-3 .animated{
+    opacity: 1;
+}
